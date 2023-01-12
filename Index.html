@@ -7,13 +7,16 @@
     <meta charset="utf-8" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="index.js"></script>
+    <script src="Usuario.js"></script>
 </head>
 
 <body>
     <center>
-        <form>
+        <!--<form>-->
             <div>
-                <h1> Sign in </h2>
+                <h1> Sign in </h1>
                     <input type="text" id="txtUser" placeholder="User">
                     <br>
                     <input type="password" id="txtPassword" placeholder="Password">  
@@ -22,7 +25,7 @@
                     <br>
                     <input type="checkbox" id="ckbConnected">
                     <label> Keep me loged in </label>
-                    <input type="submit" value="Log in">
+                    <input type="submit" value="Log in" onclick="logIn()">
             </div>
             <br>
             <div>
@@ -35,7 +38,7 @@
                 <br>
                 <input type="text" id="txtEmail" placeholder="Email">
                 <br>
-                <input type="submit" value="Sign up">
+                <input type="submit" value="Sign up" onclick="signUp()">
             </div>
             <br>
             <div>
@@ -43,7 +46,7 @@
                 <button> Sign in with Google</button>
                 <button> Sign in with Nekkrai Membership</button>
             </div>
-        </form>
+        <!--</form>-->
     </center>
 </body>
 
