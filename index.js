@@ -1,5 +1,33 @@
 function logIn(){
-    
+    let user = document.getElementById("txtUser").value
+    let password = document.getElementById("txtPassword").value
+
+    let userArr = JSON.parse(localStorage.getItem("users"))
+
+    let i = -1
+
+    for (let index = 0; index < userArr.length; index++) {
+        
+        if(user==userArr[index].usuario){
+            i = index
+            break
+        }             
+    }
+
+    if(i != -1){
+        if(password==userArr[i].contrasena){
+            console.log("El usuario es", userArr[i].usuario)
+        }
+        else{
+            console.log("Contraseña incorrecta")
+            alert("Contraseña incorrecta")
+            document.getElementById("txtPassword").value = ""
+        }
+    }
+    else{
+        console.log("El usuario no existe")
+        alert("Usuario inexistente")
+    }
 
 }
 
