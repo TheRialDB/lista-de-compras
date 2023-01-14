@@ -46,16 +46,24 @@ function signUp(){
     if(localStorage.getItem("users") == null || localStorage.getItem("users") == undefined){
         localStorage.setItem("users", "[]")
     }
-    else{
+    else {
         for (let index = 0; index < userArr.length; index++) {
                 
             if(newName==userArr[index].usuario){
                 i = index
                 break
-            }             
+            }      
+            else if(newEmail==userArr[index].correoElectronico){
+                i = -2
+                break
+            }       
         }
     }
     
+    if( newPass != confPass){
+        i = -3
+    }
+
     if(i==-1){
         let newUser = new Usuario(newName, newPass, newEmail) 
                
@@ -63,6 +71,15 @@ function signUp(){
         newData.push(newUser)
 
         localStorage.setItem("users", JSON.stringify(newData))
+    }
+    else if(i==-2){
+        alert("Correo electronico en uso")
+        document.getElementById("txtEmail").value = ""
+    }
+    else if(i==-3){
+        alert("Las contraseñas no coinciden")
+        document.getElementById("txtNewPassword").value = ""
+        document.getElementById("txtConfPassword").value = ""
     }
     else{
         alert("Nombre de usuario no disponible")
