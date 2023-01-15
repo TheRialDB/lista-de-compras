@@ -1,0 +1,60 @@
+body{ 
+    
+    background-color: #000000;
+    color: #EEEEEE;
+    font-family: "Lucida Console", "Courier New", monospace;
+    text-align: center;
+    
+}
+input:focus{
+    background-color:rgb(67, 13, 192);
+}
+input:hover{
+    background-color: rgb(51, 9, 148);
+}
+input {
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: groove;
+    opacity: 75%;
+    background-color: #000000;
+    color: #EEEEEE;
+}
+button{
+    background-color: #000000;
+    color: #EEEEEE;
+    opacity: 80%;
+}
+.triangle{
+    margin-top: 10%;
+    background-repeat: no-repeat;
+    background-position-x: center ;
+    position: relative;
+}
+.signIn{
+    position: relative;
+    bottom: 450px;
+}
+.signUp{
+    position: relative;
+    bottom: 450px;
+}
+.signInWith{
+    position: relative;
+    bottom: 420px;
+}
+#backgroundVideo {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+}
+.href{
+    color: rgb(31, 150, 248);
+}
