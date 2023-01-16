@@ -87,15 +87,31 @@ function signUp(){
     }    
 }
 
-// function onSignIn(googleUser) {
-//     var profile = googleUser.getBasicProfile();
+function onSignIn(googleUser) {
+    const responsePayload = parseJwt(googleUser.credential);
+
+     console.log("ID: " + responsePayload.sub);
+     console.log('Full Name: ' + responsePayload.name);
+     console.log('Given Name: ' + responsePayload.given_name);
+     console.log('Family Name: ' + responsePayload.family_name);
+     console.log("Image URL: " + responsePayload.picture);
+     console.log("Email: " + responsePayload.email);
 //    $("#name").text(profile.getName());
 //    $("#email").text(profile.getEmail());
 //    $("#image").attr('src', profile.getImageUrl());
 //    $(".data").css("display","block");
 //    $(".g-signin2").css("display","none");
-// }
+}
 
+function parseJwt (token) {
+    var base64Url = token.split('.')[1];
+    var base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+    var jsonPayload = decodeURIComponent(window.atob(base64).split('').map(function(c) {
+        return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+    }).join(''));
+
+    return JSON.parse(jsonPayload);
+}
 
 // function signOut() {
 //     var auth2 = gapi.auth2.getAuthInstance();
