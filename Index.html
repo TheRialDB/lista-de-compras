@@ -11,11 +11,14 @@
     
     <script src="index.js"></script>
     <script src="Usuario.js"></script>
+
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
     rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
      crossorigin="anonymous">
     <link rel="stylesheet" href="index.css">  
+</head>
+
 </head>
 
 <body>
@@ -27,42 +30,56 @@
    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <link rel="Stylesheet" href="/Styles.css"
+    
+    <video 
+    id="backgroundVideo" 
+    autoplay loop muted 
+    <source src="/Videos/AbandonedNecessaryCapeghostfrog.mp4" 
+    type="video/mp4">
+    </video>
+        <form onsubmit="return false" >
+            <div class="triangle">
+                <img src="/Images/Triangle.png">
+                <div class="signIn">
+                    <h1> SIGN IN </h1>
 
-    <center>
-        <form onsubmit="return false">
-            <div>
-                <h1> Sign in </h1>
                     <input type="text" id="txtUser" placeholder="User">
                     <br>
                     <input type="password" id="txtPassword" placeholder="Password">  
                     <br>
-                    <a href="">Forgot your password? </a>
+                    <a href="" class="href">Forgot your password? </a>
                     <br>
                     <input type="checkbox" id="ckbConnected">
-                    <label> Keep me loged in </label>
+                    <label> Keep me logged in </label>
                     <input type="submit" value="Log in" onclick="logIn()">
-            </div>
-            <br>
-            <div>
-                <h1> Sign up </h1>
-                <Input type="text" id="txtNewUser" placeholder="NewUser">
+                </div>
                 <br>
-                <input type="Password" id="txtNewPassword" placeholder="Password">
+                <div class="signUp">
+                    <h1> SIGN UP </h1>
+                    <Input type="text" id="txtNewUser" placeholder="NewUser">
+                    <br>
+                    <input type="Password" id="txtNewPassword" placeholder="Password">
+                    <br>
+                    <input type="Password" id="txtConfPassword" placeholder="Confirm Password">
+                    <br>
+                    <input type="text" id="txtEmail" placeholder="Email">
+                    <br>
+                    <input type="submit" value="Sign up" onclick="signUp()">
+                </div>
                 <br>
-                <input type="Password" id="txtConfPassword" placeholder="Confirm Password">
-                <br>
-                <input type="text" id="txtEmail" placeholder="Email">
-                <br>
+
                 <input type="submit" value="Sign up" onclick="signUp()">                
             </div>
             <br>
             <div>
-                <button> Sign in with Steam</button>
-                <div id="googleSignIn" class="g_id_signin" data-type="standard"></div>
-                <button> Sign in with Nekkrai Membership</button>
+                <div class="signInWith">
+                    <button> Sign in with Steam</button>
+                    <div id="googleSignIn" class="g_id_signin" data-type="standard"></div>
+                    <button> Sign in with Nekkrai Membership</button>
+                </div>
             </div>
         </form>
-    </center>
 </body>
 
 </html>
