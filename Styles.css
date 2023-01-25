@@ -27,14 +27,13 @@ button{
     opacity: 80%;
 }
 .triangle{
-    margin-top: 10%;
-    background-repeat: no-repeat;
-    background-position-x: center ;
-    position: relative;
+    margin-top: 5%;
+    text-align: center;
+    align-items: center;
 }
 .signIn{
     position: relative;
-    bottom: 450px;
+    bottom: 425px;
 }
 .signUp{
     position: relative;
@@ -42,8 +41,38 @@ button{
 }
 .signInWith{
     position: relative;
-    bottom: 420px;
+    bottom: 410px;
+
 }
+.triangleSize{
+    background-position-x: center ;
+
+}
+.g_id_signin{
+    
+    
+}
+
+.nsm7Bb-HzV7m-LgbsSe {
+    background-color: #000000;
+    color: #EEEEEE;
+    border: 0px;
+    height: 19.989px;  
+}
+
+.nsm7Bb-HzV7m-LgbsSe .nsm7Bb-HzV7m-LgbsSe-BPrWId{
+    font-family: "Lucida Console", "Courier New", monospace; 
+    font-weight: 400;
+}
+
+@media only screen and (max-width: 700px) {
+    
+    .triangleSize{
+        height: 580px;
+        width: 660px;
+  }
+    
+  }
 #backgroundVideo {
     width: 100vw;
     height: 100vh;
